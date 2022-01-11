@@ -3,7 +3,7 @@
 
 title: Ginger Reptiles
 url: https://gingerreptiles.com
-baseurl: https://gingerreptiles.com
+baseurl: 
 google_analytics_key:
 google_maps_javascript_api_key:
 snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
@@ -53,7 +53,7 @@ defaults:
       species: dragons
       layout: reptile
   - scope:
-      path: "_reptiles/tortiose"
+      path: "_reptiles/tortioses"
     values:
       type: tortiose
       species: tortioses
