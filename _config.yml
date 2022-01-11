@@ -1,0 +1,120 @@
+# ----
+# Site
+
+title: Ginger Reptiles
+url: https://gingerreptiles.com
+baseurl: https://gingerreptiles.com
+google_analytics_key:
+google_maps_javascript_api_key:
+snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Reptilian Store
+author:
+  name: gingerreptiles
+  email: doubgingerreptiles@gmail.com
+  twitter: gingerreptiles # twitter username without the @ symbol
+  phone: "+1 (512) 810-0000"
+social:
+  name: Ginger Reptiles
+  links:
+    - https://github.com/gingerreptiles/site
+
+# -----
+# Build
+timezone: Mountain/USA
+
+collections:
+  reptiles:
+    output: true
+    permalink: /:collection/:path
+    _hide_content: false
+    _icon: account_circle
+  # dragons:
+  #   output: true
+  #   permalink: /:collection/:path
+  #   _hide_content: true
+  #   _icon: shopping_cart
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: "_reptiles/turtles"
+    values:
+      type: turtle
+      species: turtles
+      layout: reptile
+  - scope:
+      path: "reptiles/dragons"
+    values:
+      type: dragon
+      species: dragons
+      layout: reptile
+  - scope:
+      path: "_reptiles/tortiose"
+    values:
+      type: tortiose
+      species: tortioses
+      layout: reptile
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+  # - scope:
+  #     path: "images/reptiles"
+  #   values:
+  #     image: true
+
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+jekyll-archives:
+  enabled:
+    - categories
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+# -----------
+
+garment_types:
+  - hat
+  - top
+
+social_icons:
+  - Email
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
+
+_comments:
+  map: Update the map location and display settings.
+  latitude: Coordinates for the center marker on the map.
+  longitude: Coordinates for the center marker on the map.
+  zoom: The zoom level for the map.
+  pricing_table: Update the information in the pricing tables.
+  highlight: Emphasis the text
+  color: The background color used in the plan name and call to action.
+  new_window: Open link in new window
+  description: This is used for facebook shares of the page and google indexing

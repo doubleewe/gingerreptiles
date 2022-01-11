@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<div class="content" id="products">
+	<section> {{page.url}}
+		<div class="container">
+			<ul class="product-list">
+				{% for product in site.reptiles %}
+					<li>
+						{% include product-styles.html product=product %}
+						<div class="product-details">
+							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
+							<div class="product-description">
+								{{ product.description_markdown | truncate: 45 | markdownify }}
+							</div>
+							<p>${{ product.price }}</p>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+</div>
+
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="{{ site.api_key }}" id="snipcart"></script>
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+
+<!-- 
+
+
+
+<div class="content" id="products">
+	<section>
+		<div class="container">
+			<ul class="product-list">
+				{% if page.collection == "turtles" and page.url == "/reptiles/turtles/" %}
+					{% assign single_item = false %}
+					{% for product in site.reptiles %}
+					{% if product.name !="" %}
+						<li>
+							{% include product-styles.html product=product %}
+							<div class="product-details">
+								<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
+								<div class="product-description">
+									{{ product.description_markdown | truncate: 45 | markdownify }}
+								</div>
+								<p>${{ product.price }}</p>
+							</div>
+						</li>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			
+				{% if page.collection == "dragons" and page.url == "/dragons/index" %}
+					{% assign single_item = false %}
+					{% for product in site.reptiles %}
+						<li>
+							{% include product-styles.html product=product %}
+							<div class="product-details">
+								<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
+								<div class="product-description">
+									{{ product.description_markdown | truncate: 45 | markdownify }}
+								</div>
+								<p>${{ product.price }}</p>
+							</div>
+						</li>
+					{% endfor %}
+				{% endif %}	
+				{% assign image_files = site.static_files | where: "image", true %}
+{% for myimage in image_files %}
+  {{ myimage.path }}
+{% endfor %}
+				{% if single_item != false %}
+					<div class="content">
+						<section class="page">
+							<div class="container">
+								<div class="product-container">
+									<h3>testtest{{ site.baseurl }}{{ style.image }}</h3>
+									{% include product-styles.html product=page.collection %}
+									<div class="product-details" id="add">
+										<h3>{{ page.name }}</h3>
+										{{ page.description_markdown | markdownify }}
+					
+										<h4>${{ page.price }}</h4>
+										<div class="button">{% include snipcart-button.html product=page %}</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					
+					<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="{{ site.api_key }}" id="snipcart"></script>
+					<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+				{% endif %}
+			</ul>
+		</div>
+	</section>
+</div>
+
+hello -->

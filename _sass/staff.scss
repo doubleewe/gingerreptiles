@@ -1,0 +1,90 @@
+
+.staff-image {
+	margin: 25px auto 0 auto;
+	background: no-repeat center center;
+	background-size: cover;
+	border-radius: 300px;
+	width: 70%;
+	padding-bottom: 70%;
+}
+
+.staff {
+	padding: 0;
+	list-style: none;
+	@extend %flexbox;
+	@include flex-flow(wrap);
+	text-align: center;
+	margin: -175px 0 0 0;
+	justify-content: center;
+
+	li {
+		padding: 30px 20px;
+		box-sizing: border-box;
+		flex: 0 1 300px;
+		background: #fff;
+		margin: 0 60px;
+		border-radius: 3px;
+		box-shadow: 0 10px 100px 0 rgba(0,0,0,0.1);
+	}
+
+	.square-image {
+		width: 400px;
+		height: 400px;
+
+		img {
+			border-radius: 400px;
+		}
+	}
+	a {
+		color: #666;
+	}
+	.name {
+		font-size: 2.2rem;
+		margin-top: 20px;	
+	}
+
+	.first-initial {
+		font-size: 4.5rem;
+		margin: 0px;
+		padding: 0px;
+		font-weight: 800;
+	}
+	.first-name {
+		font-size: 2.9rem;
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		left: -10px;
+		
+	}
+	div.name::first-letter {
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	.nickname {
+		font-size: 1.8rem;
+		margin-top: 1rem;
+		font-weight: 200;
+		font-style: italic;
+	}
+	.blurb {
+		font-size: 1rem;
+		margin-top: 1rem;
+		font-weight: 300;
+		font-style: italic;
+		display: none;
+	}
+	.position {
+		font-size: 1.3rem;
+		color: #666;
+	}
+}
+
+
+.story-points {
+	h3 {
+		font-size: 1.3rem;
+		margin: 0;
+		color: $brand-color;
+	}
+}
