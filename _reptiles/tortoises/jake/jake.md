@@ -14,7 +14,7 @@ sizes:
 styles:
   - name: Green
     color: '#67aa79'
-    image: /reptiles/turtles/jake/jake.jpg
+    image: /reptiles/tortoises/jake/jake.jpg
 classification:
   Kingdom:	Animalia
   Phylum:	Chordata
